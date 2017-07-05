@@ -170,7 +170,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -180,7 +180,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -210,7 +210,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            Über
+            A propos
           </a>
         </li>
       
@@ -253,6 +253,109 @@
             
               
                 
+                <a class="post-title-link" href="/2017/07/05/JS实现排序算法/" itemprop="url">
+                  JS实现排序算法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posté le</span>
+            <time itemprop="dateCreated" datetime="2017-07-05T17:02:40+08:00" content="2017-07-05">
+              2017-07-05
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>总结下用js实现排序的几种普遍方法：</p>
+<h4 id="1-冒泡排序"><a href="#1-冒泡排序" class="headerlink" title="1. 冒泡排序"></a>1. 冒泡排序</h4><h6 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h6><p>依次比较相邻的两个元素，如果后一个小于前一个，则交换，这样从头到尾一次，就将最大的放到了末尾。</p>
+<h6 id="平均时间复杂度：O-n-2-。"><a href="#平均时间复杂度：O-n-2-。" class="headerlink" title="平均时间复杂度：O(n^2)。"></a>平均时间复杂度：O(n^2)。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">function bubbleSort(arr) &#123;</div><div class="line">    var temp;</div><div class="line">    if(arr.length == 0 || arr == null) &#123;</div><div class="line">        return arr;</div><div class="line">    &#125;</div><div class="line">// [1, 545, 55, 33, 23, 21, 3]</div><div class="line">    for(var i = 0; i &lt; arr.length - 1; i++ ) &#123;</div><div class="line">        for(j = 0; j &lt; arr.length - i - 1; j++) &#123;</div><div class="line">            if(arr[j] &gt; arr[j+1]) &#123;</div><div class="line">                temp = arr[j];</div><div class="line">                arr[j] = arr[j+1];</div><div class="line">                arr[j+1] = temp;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    return arr;</div><div class="line">&#125;</div><div class="line">//bubbleSort([1,34,23,34543,12,544,2])</div><div class="line">//[1, 2, 12, 23, 34, 544, 34543]</div></pre></td></tr></table></figure>
+<h5 id="2-选择排序"><a href="#2-选择排序" class="headerlink" title="2. 选择排序"></a>2. 选择排序</h5><h6 id="原理：-1"><a href="#原理：-1" class="headerlink" title="原理："></a>原理：</h6><p>每次找一个最大或者最小的数排在最开始，让其他数与之比较，进而选择是否交换位置。</p>
+<h6 id="平均时间复杂度：O-n-2-。-1"><a href="#平均时间复杂度：O-n-2-。-1" class="headerlink" title="平均时间复杂度：O(n^2)。"></a>平均时间复杂度：O(n^2)。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">function selectSort (arr) &#123;</div><div class="line">  var length = arr.length,</div><div class="line">      i,</div><div class="line">      j,</div><div class="line">      k,</div><div class="line">      temp;</div><div class="line"></div><div class="line">  if( length === 0 || arr === null ) &#123;</div><div class="line">        return arr;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  for(i = 0; i &lt; length - 1; i++) &#123;</div><div class="line">    k = i; //标记最小数</div><div class="line">    for(j = i + 1; j &lt; length; j++) &#123;</div><div class="line">      if(arr[k] &gt; arr[j]) &#123;</div><div class="line">        k = j;</div><div class="line">      &#125;</div><div class="line">      temp = arr[k];</div><div class="line">      arr[k] = arr[i];</div><div class="line">      arr[i] = temp;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return arr;</div><div class="line">&#125;</div><div class="line">//selectSort([1,43,2,324,23,534,2])</div><div class="line">//[1, 2, 2, 23, 43, 324, 534]</div></pre></td></tr></table></figure>
+<h5 id="3-插入排序"><a href="#3-插入排序" class="headerlink" title="3. 插入排序"></a>3. 插入排序</h5><h6 id="原理：-2"><a href="#原理：-2" class="headerlink" title="原理："></a>原理：</h6><p>将元素插入到有序序列中，一般将第一个元素视为有序序列，插入元素视为待排序列，与第一个元素进行比较插入。</p>
+<h6 id="平均时间复杂度：O-n-2-。-2"><a href="#平均时间复杂度：O-n-2-。-2" class="headerlink" title="平均时间复杂度：O(n^2)。"></a>平均时间复杂度：O(n^2)。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">function insertionSort (arr) &#123;</div><div class="line">    var length = arr.length,</div><div class="line">      i,</div><div class="line">      j,</div><div class="line">      k,</div><div class="line">      preIndex, //当前元素的前一个元素的下标</div><div class="line">      current; //当前待排元素</div><div class="line"></div><div class="line">  if( length === 0 || arr === null ) &#123;</div><div class="line">        return;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  for(i = 1; i &lt; length; i++) &#123;</div><div class="line">    preIndex = i - 1;</div><div class="line">    current = arr[i];</div><div class="line">    while(preIndex &gt;= 0 &amp;&amp; current &lt; arr[preIndex]) &#123;</div><div class="line">      arr[preIndex+1] = arr[preIndex]; // 比current大的元素后移</div><div class="line">      preIndex--;</div><div class="line">    &#125;</div><div class="line">    arr[preIndex+1] = current;//将current插入到数组中</div><div class="line">  &#125;</div><div class="line">  return arr;</div><div class="line">&#125;</div><div class="line">//insertionSort([23,34,2,43,3423,23,1123,3])</div><div class="line">//[2, 3, 23, 23, 34, 43, 1123, 3423]</div></pre></td></tr></table></figure>
+<h5 id="4-快速排序"><a href="#4-快速排序" class="headerlink" title="4. 快速排序"></a>4. 快速排序</h5><h6 id="原理：-3"><a href="#原理：-3" class="headerlink" title="原理："></a>原理：</h6><p>选择一个基准，将比基准小的，放在基准左边，将比基准大的，放在基准右边；一般选择中间的作为基准，之后两边再用递归的方法不断重复上述过程。</p>
+<h6 id="平均时间复杂度：O-nlog-n-。"><a href="#平均时间复杂度：O-nlog-n-。" class="headerlink" title="平均时间复杂度：O(nlog(n))。"></a>平均时间复杂度：O(nlog(n))。</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">function quickSort (arr) &#123;</div><div class="line">  if( arr.length &lt;= 1 ) &#123;</div><div class="line">        return arr;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  var left = [],</div><div class="line">      right = [],</div><div class="line">      i,</div><div class="line">      j,</div><div class="line">      k,</div><div class="line">      pivotIndex, // 参考点下标</div><div class="line">      pivot; //参考点</div><div class="line"></div><div class="line">  pivotIndex = Math.floor(arr.length / 2);</div><div class="line">  pivot = arr.splice(pivotIndex, 1)[0];//截取参考点</div><div class="line"></div><div class="line">  for(i = 0; i &lt; arr.length; i++) &#123;</div><div class="line">    if(arr[i] &lt; pivot) &#123;</div><div class="line">      left.push(arr[i]);</div><div class="line">    &#125;else &#123;</div><div class="line">      right.push(arr[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  return quickSort(left).concat([pivot], quickSort(right)); //递归进行上述规则排序 最后返回数组</div><div class="line">&#125;</div><div class="line">//quickSort([12,3,2,434,21,32,23,11])</div><div class="line">//[2, 3, 11, 12, 21, 23, 32, 434]</div></pre></td></tr></table></figure>
+<p><em>未完待续</em></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2017/07/05/活动页中打开APP、扫码下载APP方案总结/" itemprop="url">
                   活动页中打开APP、扫码下载APP方案总结
                 </a>
@@ -266,7 +369,7 @@
             <span class="post-meta-item-icon">
               <i class="fa fa-calendar-o"></i>
             </span>
-            <span class="post-meta-item-text">Veröffentlicht am</span>
+            <span class="post-meta-item-text">Posté le</span>
             <time itemprop="dateCreated" datetime="2017-07-05T17:00:07+08:00" content="2017-07-05">
               2017-07-05
             </time>
@@ -422,8 +525,8 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">Artikel</span>
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">articles</span>
             </a>
           </div>
 
@@ -470,11 +573,11 @@
 </div>
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="http://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="http://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
