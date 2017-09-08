@@ -406,7 +406,7 @@ dd {
 }
 .search-icon {
   position: absolute;
-  top: 9px;
+  top: 16px;
 }
 table {
   margin: 20px 0;
@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #2fe88c;
+  background: #ffe562;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2017,7 +2017,7 @@ a.search-result {
 }
 #local-search-input {
   margin-bottom: 10px;
-  width: 50%;
+  width: 97%;
 }
 .popup-btn-close {
   position: absolute;
