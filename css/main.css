@@ -1549,7 +1549,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #757e60;
+  background: #5069be;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2016,6 +2016,7 @@ a.search-result {
   background-color: rgba(0,0,0,0.3);
 }
 #local-search-input {
+  padding: 10px;
   margin-bottom: 10px;
   width: 97%;
 }
