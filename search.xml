@@ -14,11 +14,12 @@
 <li>最后安全组如下：<br><img src="http://upload-images.jianshu.io/upload_images/2658726-83313bde30090e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><ul>
 <li>22 用于SSH远程连接到Linux实例</li>
 <li>3306 实例作为 MySQL 服务器</li>
-<li>80 实例作为网站或 Web 应用的服务器</li>
+<li>80 实例作为网站或 Web 应用的服务器<a id="more"></a>
+<h4 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h4></li>
 </ul>
 </li>
 </ul>
-<h4 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mysql-server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mysql-server</div></pre></td></tr></table></figure>
 <p>安装过程会弹出提示框，输入root用户的密码，我在这里设置密码为root</p>
 <p>安装完成后，MySQL服务器会自动启动，我们检查MySQL服务器程序。</p>
 <h4 id="mysql检查"><a href="#mysql检查" class="headerlink" title="mysql检查"></a>mysql检查</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># 检查MySQL服务器系统进程</div><div class="line">-aux|grep mysql</div><div class="line">mysql     3205  2.0  0.5 549896 44092 ?        Ssl  20:10   0:00 /usr/sbin/mysqld</div><div class="line">conan     3360  0.0  0.0  11064   928 pts/0    S+   20:10   0:00 grep --color=auto mysql</div><div class="line"></div><div class="line"># 检查MySQL服务器占用端口</div><div class="line">netstat -nlt|grep 3306</div><div class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN</div><div class="line"></div><div class="line"># 通过启动命令检查MySQL服务器状态</div><div class="line">sudo /etc/init.d/mysql status</div><div class="line"># 通过系统服务命令检查MySQL服务器状态</div><div class="line">service mysql status</div></pre></td></tr></table></figure>
