@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="growthcoder.me/"/>
-  <updated>2017-12-29T07:00:01.546Z</updated>
+  <updated>2018-01-28T05:18:51.622Z</updated>
   <id>growthcoder.me/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Yeoman量身定制前端脚手架.md</title>
+    <link href="growthcoder.me/2018/01/28/Yeoman%E9%87%8F%E8%BA%AB%E5%AE%9A%E5%88%B6%E5%89%8D%E7%AB%AF%E8%84%9A%E6%89%8B%E6%9E%B6-md/"/>
+    <id>growthcoder.me/2018/01/28/Yeoman量身定制前端脚手架-md/</id>
+    <published>2018-01-28T05:18:51.000Z</published>
+    <updated>2018-01-28T05:18:51.622Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>ubuntu下安装mysql</title>
