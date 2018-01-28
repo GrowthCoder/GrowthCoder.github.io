@@ -5,8 +5,7 @@
     <entry>
       <title><![CDATA[Yeoman量身定制前端脚手架]]></title>
       <url>/2018/01/28/Yeoman%E9%87%8F%E8%BA%AB%E5%AE%9A%E5%88%B6%E5%89%8D%E7%AB%AF%E8%84%9A%E6%89%8B%E6%9E%B6-md/</url>
-      <content type="html"><![CDATA[<h2 id="Yeoman是什么？"><a href="#Yeoman是什么？" class="headerlink" title="Yeoman是什么？"></a>Yeoman是什么？</h2><p><strong>++Yeoman为何方神圣，说他有三头六臂一点都不夸张。++</strong></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2658726-d9f706a2c367f6f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="d5978593e4269f636f250dcdd8503590.png"></p>
+      <content type="html"><![CDATA[<h2 id="Yeoman是什么？"><a href="#Yeoman是什么？" class="headerlink" title="Yeoman是什么？"></a>Yeoman是什么？</h2><h3 id="Yeoman为何方神圣，说他有三头六臂一点都不夸张"><a href="#Yeoman为何方神圣，说他有三头六臂一点都不夸张" class="headerlink" title="Yeoman为何方神圣，说他有三头六臂一点都不夸张"></a>Yeoman为何方神圣，说他有三头六臂一点都不夸张</h3><p><img src="http://upload-images.jianshu.io/upload_images/2658726-d9f706a2c367f6f0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="d5978593e4269f636f250dcdd8503590.png"></p>
 <p>因为他<strong>由三部分组成</strong>：yo(脚手架工具)、grunt(等构建工具)、npm(等包管理器)。</p>
 <p>官方文档中给他的定位为<strong>scaffolding tool</strong>，其实就是脚手架工具，可以帮助前端开发人员量身定制化自己的脚手架，省去copy环节。</p>
 <p>使用 <strong>yeoman generator</strong>可以帮助我们<em>构建项目结构、安装依赖等</em>重复性操作，然而已有的generator有时并不能满足需求，所以可以使用yeoman的<a href="http://yeoman.io/generator/" target="_blank" rel="external">API</a>来构建自己的生成器。</p>
