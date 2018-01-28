@@ -87,20 +87,20 @@
 
 
 <meta name="description" content="最近做活动，需要用到在H5中打开/下载APP，PC端扫码下载APP相关业务，看似很小的一个功能，却蕴藏很大玄机。主要的难点在于在微信中唤醒APP，参考了很多产品的实现方式，对唱吧、今日头条等这几个平台颇为满意。最终我们团队，也实现了想要的功能。
-#####功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打">
+功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打开指定活动">
 <meta property="og:type" content="article">
-<meta property="og:title" content="活动页中打开APP、扫码下载APP方案总结">
+<meta property="og:title" content="打开APP、扫码下载、唤醒本地APP方案总结">
 <meta property="og:url" content="growthcoder.me/2017/07/05/活动页中打开APP、扫码下载APP方案总结/index.html">
 <meta property="og:site_name" content="GrowthCoder">
 <meta property="og:description" content="最近做活动，需要用到在H5中打开/下载APP，PC端扫码下载APP相关业务，看似很小的一个功能，却蕴藏很大玄机。主要的难点在于在微信中唤醒APP，参考了很多产品的实现方式，对唱吧、今日头条等这几个平台颇为满意。最终我们团队，也实现了想要的功能。
-#####功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打">
+功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打开指定活动">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2658726-0ce0454a64231bf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2658726-28e51cf93152a907.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-07-05T09:08:42.387Z">
+<meta property="og:updated_time" content="2018-01-26T01:41:53.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="活动页中打开APP、扫码下载APP方案总结">
+<meta name="twitter:title" content="打开APP、扫码下载、唤醒本地APP方案总结">
 <meta name="twitter:description" content="最近做活动，需要用到在H5中打开/下载APP，PC端扫码下载APP相关业务，看似很小的一个功能，却蕴藏很大玄机。主要的难点在于在微信中唤醒APP，参考了很多产品的实现方式，对唱吧、今日头条等这几个平台颇为满意。最终我们团队，也实现了想要的功能。
-#####功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打">
+功能描述①Android端  微信中，依托应用宝实现打开、下载逻辑；    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打开指定活动">
 <meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2658726-0ce0454a64231bf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -119,7 +119,7 @@
   };
 </script>
 
-  <title> 活动页中打开APP、扫码下载APP方案总结 | GrowthCoder </title>
+  <title> 打开APP、扫码下载、唤醒本地APP方案总结 | GrowthCoder </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -278,7 +278,7 @@
             
             
               
-                活动页中打开APP、扫码下载APP方案总结
+                打开APP、扫码下载、唤醒本地APP方案总结
               
             
           </h1>
@@ -324,7 +324,7 @@
 
       
         <p>最近做活动，需要用到在H5中打开/下载APP，PC端扫码下载APP相关业务，看似很小的一个功能，却蕴藏很大玄机。主要的难点在于在<strong>微信中唤醒APP</strong>，参考了很多产品的实现方式，对唱吧、今日头条等这几个平台颇为满意。最终我们团队，也实现了想要的功能。</p>
-<p>#####功能描述<br>①Android端  微信中，依托应用宝实现打开、下载逻辑；<br>    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打开指定活动页。<br>②IOS端 微信中，本地没有APP，依托应用宝进行下载，本地有APP，则可以在微信中唤醒APP，并且在APP中打开该活动页。<br>浏览器中，本地没有APP，跳iTunes下载，有APP，唤醒。<br><img src="http://upload-images.jianshu.io/upload_images/2658726-0ce0454a64231bf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><a id="more"></a></p>
+<h5 id="功能描述"><a href="#功能描述" class="headerlink" title="功能描述"></a>功能描述</h5><p>①Android端  微信中，依托应用宝实现打开、下载逻辑；<br>    浏览器中，本地没有APP，跳到指定下载页，有APP可以唤醒APP并打开指定活动页。<br>②IOS端 微信中，本地没有APP，依托应用宝进行下载，本地有APP，则可以在微信中唤醒APP，并且在APP中打开该活动页。<br>浏览器中，本地没有APP，跳iTunes下载，有APP，唤醒。<br><img src="http://upload-images.jianshu.io/upload_images/2658726-0ce0454a64231bf9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><a id="more"></a></p>
 <h3 id="一、方案流程"><a href="#一、方案流程" class="headerlink" title="一、方案流程"></a>一、方案流程</h3><p><img src="http://upload-images.jianshu.io/upload_images/2658726-28e51cf93152a907.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <table>
 <thead>
@@ -378,8 +378,7 @@
 <p><em>//②app.html</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"> var env = &#123;</div><div class="line"> agent: window.navigator.userAgent.toLowerCase(),</div><div class="line"> downURL: &apos;http://appdownload.17win.com/&apos;,</div><div class="line"> activityURL: &apos;winwin://?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html?edu&apos;,</div><div class="line"> yybaoURL: &apos;http://a.app.qq.com/o/simple.jsp?pkgname=com.winwin.tax&apos;,</div><div class="line"> // eduURL: &apos;https://171edu.com/download.html&apos;,</div><div class="line"> eduURL: &apos;https://shui5.servyou.com.cn/download.html?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html&amp;utm_campaign=xueyuan&amp;utm_medium=app&amp;utm_source=ewm&apos;,</div><div class="line"> iosActivityURL: &apos;https://shui5.servyou.com.cn/download.html?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html&apos;,</div><div class="line"></div><div class="line"> isWechat: function()&#123;</div><div class="line">     return this.agent.match(/MicroMessenger/i) == &apos;micromessenger&apos;;</div><div class="line"> &#125;,</div><div class="line"> isAndroid: function()&#123;</div><div class="line">     return this.agent.match(/android/i) == &apos;android&apos;;</div><div class="line"> &#125;,</div><div class="line"> isIphone: function()&#123;</div><div class="line">     return this.agent.match(/iphone/i) == &apos;iphone&apos;;</div><div class="line">   &#125;</div><div class="line"> &#125;;</div><div class="line"> window.onload = function() &#123;</div><div class="line">     var btn = document.getElementById(&apos;btn&apos;);</div><div class="line">     btn.click();</div><div class="line"> &#125;;</div><div class="line"></div><div class="line"> function goto () &#123;</div><div class="line">     window.location.href = &apos;https://shui5.servyou.com.cn/download.html?utm_campaign=xueyuan&amp;utm_medium=app&amp;utm_source=ewm&apos;;</div><div class="line"> &#125;</div><div class="line">&lt;/script&gt;</div><div class="line">&lt;button style=&quot;opacity: 0;&quot; id=&quot;btn&quot; onclick=goto()&gt;&lt;/button&gt;</div></pre></td></tr></table></figure></p>
 <p><em>//③活动页面中打开app相关js</em><br><em>////env.js</em><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">var env = &#123;</div><div class="line"> agent: window.navigator.userAgent.toLowerCase(),</div><div class="line"> downURL: &apos;http://appdownload.17win.com/&apos;,</div><div class="line"> activityURL: &apos;winwin://?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html?edu&apos;,</div><div class="line"> yybaoURL: &apos;http://a.app.qq.com/o/simple.jsp?pkgname=com.winwin.tax&apos;,</div><div class="line"> eduURL: &apos;https://171edu.com/download.html?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html&amp;utm_campaign=xueyuan&amp;utm_medium=app&amp;utm_source=ewm&apos;,</div><div class="line"> shui5URL: &apos;https://shui5.servyou.com.cn/download.html?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html&amp;utm_campaign=xueyuan&amp;utm_medium=app&amp;utm_source=ewm&apos;,</div><div class="line"> iosActivityURL: &apos;https://shui5.servyou.com.cn/download.html?type=activity&amp;url=http://promotion.171edu.com/swpx/index.html&apos;,</div><div class="line"></div><div class="line"> isWechat: function()&#123;</div><div class="line">     return this.agent.match(/MicroMessenger/i) == &apos;micromessenger&apos;;</div><div class="line"> &#125;,</div><div class="line"> isAndroid: function()&#123;</div><div class="line">     return this.agent.match(/android/i) == &apos;android&apos;;</div><div class="line"> &#125;,</div><div class="line"> isIphone: function()&#123;</div><div class="line">     return this.agent.match(/iphone/i) == &apos;iphone&apos;;</div><div class="line">   &#125;</div><div class="line">&#125;;</div><div class="line">;$(function() &#123;</div><div class="line"> $(&apos;.btn-app&apos;).bind(&apos;click&apos;, function() &#123;</div><div class="line">//现在实现逻辑</div><div class="line"> if(env.isWechat() &amp;&amp; env.isAndroid())&#123;</div><div class="line">     window.location.href = env.yybaoURL;</div><div class="line"> &#125;else &#123;</div><div class="line">     window.location.href = env.shui5URL;</div><div class="line"> &#125;</div><div class="line"> &#125;);</div><div class="line">//以后用171edu服务器，直接用下面的</div><div class="line">//window.location.href = env.eduURL;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
 <h3 id="五、扫码下载实现逻辑"><a href="#五、扫码下载实现逻辑" class="headerlink" title="五、扫码下载实现逻辑"></a>五、扫码下载实现逻辑</h3><p>二维码为app.html，该页面主要是模拟触发点击按钮事件，进行跳转到download.html，之后进行下载业务处理</p>
-<p>######本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。</p>
-
+<h6 id="本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。"><a href="#本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。" class="headerlink" title="本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。"></a>本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。</h6>
       
     </div>
 
@@ -580,7 +579,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、方案流程"><span class="nav-number">1.</span> <span class="nav-text">一、方案流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、针对以上方案ios端的配置工作："><span class="nav-number">2.</span> <span class="nav-text">二、针对以上方案ios端的配置工作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Android实现"><span class="nav-number">3.</span> <span class="nav-text">三、Android实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、相关页面代码"><span class="nav-number">4.</span> <span class="nav-text">四、相关页面代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、扫码下载实现逻辑"><span class="nav-number">5.</span> <span class="nav-text">五、扫码下载实现逻辑</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#功能描述"><span class="nav-number">1.</span> <span class="nav-text">功能描述</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一、方案流程"><span class="nav-number"></span> <span class="nav-text">一、方案流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、针对以上方案ios端的配置工作："><span class="nav-number"></span> <span class="nav-text">二、针对以上方案ios端的配置工作：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三、Android实现"><span class="nav-number"></span> <span class="nav-text">三、Android实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#四、相关页面代码"><span class="nav-number"></span> <span class="nav-text">四、相关页面代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#五、扫码下载实现逻辑"><span class="nav-number"></span> <span class="nav-text">五、扫码下载实现逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。"><span class="nav-number">0.1.</span> <span class="nav-text">本人的第一篇博客，感谢您阅读到了最后，文中如果有不足之处，还请批评指正。</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
@@ -599,7 +598,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
