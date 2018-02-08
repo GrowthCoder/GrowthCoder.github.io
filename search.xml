@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[深入浅出React和Redux笔记之Redux]]></title>
-      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BRedux-md/</url>
+      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BRedux/</url>
       <content type="html"><![CDATA[<h4 id="三个基本原则"><a href="#三个基本原则" class="headerlink" title="三个基本原则"></a>三个基本原则</h4><ul>
 <li><p>唯一数据源</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">应用的状态数据应该只存储在唯一的一个 Store 上。这个唯一 Store 上的状态，</div><div class="line">是一个树形的对象，每个组件往往只是用树形对象上一部</div><div class="line">分的数据，而如何设计 Store 上状态的结构，就是 Redux 应用的核心问题</div></pre></td></tr></table></figure>
@@ -16,7 +16,7 @@
 <a id="more"></a>
 <ul>
 <li><p>数据改变只能通过纯函数完成</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">纯函数就是 Reducer</div><div class="line"></div><div class="line">reducer(state ,  action )</div><div class="line"></div><div class="line">第一个参数 state 是当前的状态，</div><div class="line">第二个参数 action 是接收到的 action 对象，</div><div class="line">而 reducer函数要做的事情，就是根据 state 和 action 的值产生一个新的对象返回，注意 reducer 必须是纯函数，</div><div class="line">也就是说函数的返回结果必须完全由参数 state 和 action 决定，</div><div class="line">而且不产生任何副作用，也不能修改参数 state 和 action 对象。</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">纯函数就是 Reducer</div><div class="line"></div><div class="line">reducer(state ,  action )</div><div class="line"></div><div class="line">第一个参数 state 是当前的状态，</div><div class="line">第二个参数 action 是接收到的 action 对象，</div><div class="line">而 reducer函数要做的事情，就是根据 state 和 action 的值产生一个新的对象返回，</div><div class="line">注意 reducer 必须是纯函数，</div><div class="line">也就是说函数的返回结果必须完全由参数 state 和 action 决定，</div><div class="line">而且不产生任何副作用，也不能修改参数 state 和 action 对象。</div></pre></td></tr></table></figure>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// Redux的 reducer 只负责计算状态，却并不负责存储状态</div><div class="line"></div><div class="line">function  reducer(state ,  action)  =&gt;  &#123;</div><div class="line">    const  &#123;counterCaption&#125;  =  action;</div><div class="line"></div><div class="line">    switch  (action.type) &#123;</div><div class="line">        case  ActionTypes.INCREMENT :</div><div class="line">            return  &#123;  ...state ,  [  counterCaption] :  state  [  counterCaption ]  +  1&#125;;</div><div class="line">        case  ActionTypes . DECREMENT:</div><div class="line">            return  &#123;  ...state,  [counterCaption] :  state  [  counterCaption)  - 1&#125;;</div><div class="line">        default :</div><div class="line">            return  state</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -46,7 +46,7 @@
     
     <entry>
       <title><![CDATA[深入浅出React和Redux笔记之React]]></title>
-      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BReact-md/</url>
+      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BReact/</url>
       <content type="html"><![CDATA[<h3 id="第一章-React新的前端思维"><a href="#第一章-React新的前端思维" class="headerlink" title="第一章 React新的前端思维"></a>第一章 React新的前端思维</h3><ul>
 <li><strong>响应式编程</strong> Reactive Programming</li>
 <li><code>Virutal DOM</code>不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲<br>染 React 组件时，会对比这一次产生的 <code>Virutal DOM</code> 和上一次渲染的 <code>Virutal
