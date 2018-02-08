@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Hexo, NexT，GrowthCoder，前端，博客" />
 
 
 
@@ -86,45 +86,28 @@
 
 
 
-<meta name="description" content="安装mysql前配置
-新买的服务器，端口都没有对外开放，需要对服务器安全组进行配置。
-
-可以添加安全组规则，允许或者禁止安全组内的ECS实例对公网、内网的访问
-
-VPC 网络：只需要设置出方向和入方向的规则，不区分私网和公网。
-最后安全组如下：
-22 用于SSH远程连接到Linux实例
-3306 实例作为 MySQL 服务器
-80 实例作为网站或 Web 应用的服务器">
+<meta name="description" content="第一章 React新的前端思维
+响应式编程 Reactive Programming
+Virutal DOM不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲染 React 组件时，会对比这一次产生的 Virutal DOM 和上一次渲染的 Virutal
+DOM，对比就会发现差别，然后修改真正的DOM树时就只需要触及差别中的部分就行。
+React等于强制所有组">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu下安装mysql">
-<meta property="og:url" content="growthcoder.me/2017/12/20/ubuntu下安装mysql/index.html">
+<meta property="og:title" content="深入浅出React和Redux笔记之React">
+<meta property="og:url" content="growthcoder.me/2018/02/08/深入浅出React和Redux笔记之React-md/index.html">
 <meta property="og:site_name" content="GrowthCoder">
-<meta property="og:description" content="安装mysql前配置
-新买的服务器，端口都没有对外开放，需要对服务器安全组进行配置。
-
-可以添加安全组规则，允许或者禁止安全组内的ECS实例对公网、内网的访问
-
-VPC 网络：只需要设置出方向和入方向的规则，不区分私网和公网。
-最后安全组如下：
-22 用于SSH远程连接到Linux实例
-3306 实例作为 MySQL 服务器
-80 实例作为网站或 Web 应用的服务器">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2658726-83313bde30090e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-12-29T07:00:01.546Z">
+<meta property="og:description" content="第一章 React新的前端思维
+响应式编程 Reactive Programming
+Virutal DOM不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲染 React 组件时，会对比这一次产生的 Virutal DOM 和上一次渲染的 Virutal
+DOM，对比就会发现差别，然后修改真正的DOM树时就只需要触及差别中的部分就行。
+React等于强制所有组">
+<meta property="og:updated_time" content="2018-02-08T08:03:44.761Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu下安装mysql">
-<meta name="twitter:description" content="安装mysql前配置
-新买的服务器，端口都没有对外开放，需要对服务器安全组进行配置。
-
-可以添加安全组规则，允许或者禁止安全组内的ECS实例对公网、内网的访问
-
-VPC 网络：只需要设置出方向和入方向的规则，不区分私网和公网。
-最后安全组如下：
-22 用于SSH远程连接到Linux实例
-3306 实例作为 MySQL 服务器
-80 实例作为网站或 Web 应用的服务器">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2658726-83313bde30090e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="深入浅出React和Redux笔记之React">
+<meta name="twitter:description" content="第一章 React新的前端思维
+响应式编程 Reactive Programming
+Virutal DOM不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲染 React 组件时，会对比这一次产生的 Virutal DOM 和上一次渲染的 Virutal
+DOM，对比就会发现差别，然后修改真正的DOM树时就只需要触及差别中的部分就行。
+React等于强制所有组">
 
 
 
@@ -142,7 +125,7 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
   };
 </script>
 
-  <title> ubuntu下安装mysql | GrowthCoder </title>
+  <title> 深入浅出React和Redux笔记之React | GrowthCoder </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
@@ -301,7 +284,7 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
             
             
               
-                ubuntu下安装mysql
+                深入浅出React和Redux笔记之React
               
             
           </h1>
@@ -313,8 +296,8 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-12-20T17:22:50+08:00" content="2017-12-20">
-              2017-12-20
+            <time itemprop="dateCreated" datetime="2018-02-08T15:57:06+08:00" content="2018-02-08">
+              2018-02-08
             </time>
           </span>
 
@@ -346,33 +329,64 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
       
 
       
-        <h4 id="安装mysql前配置"><a href="#安装mysql前配置" class="headerlink" title="安装mysql前配置"></a>安装mysql前配置</h4><ul>
-<li><p>新买的服务器，端口都没有对外开放，需要对服务器安全组进行配置。</p>
-</li>
-<li><p>可以添加安全组规则，允许或者禁止安全组内的ECS实例对公网、内网的访问</p>
-</li>
-<li>VPC 网络：只需要设置出方向和入方向的规则，不区分私网和公网。</li>
-<li>最后安全组如下：<br><img src="http://upload-images.jianshu.io/upload_images/2658726-83313bde30090e76.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><ul>
-<li>22 用于SSH远程连接到Linux实例</li>
-<li>3306 实例作为 MySQL 服务器</li>
-<li>80 实例作为网站或 Web 应用的服务器<a id="more"></a>
-<h4 id="mysql安装"><a href="#mysql安装" class="headerlink" title="mysql安装"></a>mysql安装</h4></li>
+        <h3 id="第一章-React新的前端思维"><a href="#第一章-React新的前端思维" class="headerlink" title="第一章 React新的前端思维"></a>第一章 React新的前端思维</h3><ul>
+<li><strong>响应式编程</strong> Reactive Programming</li>
+<li><code>Virutal DOM</code>不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲<br>染 React 组件时，会对比这一次产生的 <code>Virutal DOM</code> 和上一次渲染的 <code>Virutal
+DOM</code>，对比<br>就会发现差别，然后修改真正的<code>DOM</code>树时就只需要触及差别中的部分就行。</li>
+<li><code>React</code>等于强制所有组件都按照这种由<code>数据驱动渲染的模式</code>来工作，无论应用的规模多大，都能让程序处于可控范围内。<a id="more"></a>
+<h3 id="第二章-构建高质量React组件"><a href="#第二章-构建高质量React组件" class="headerlink" title="第二章 构建高质量React组件"></a>第二章 构建高质量React组件</h3></li>
+<li>组件的划分要满足<strong>高内聚、低耦合</strong>的原则</li>
 </ul>
+<h4 id="React-的-prop"><a href="#React-的-prop" class="headerlink" title="React 的 prop"></a>React 的 prop</h4><ul>
+<li><p>在 <code>ControlPanel</code>的<code>render</code>函数中将这三个子组件实例用<code>div</code>包起来，因为<code>React</code>要求<code>render</code>函数只能返回一个元素</p>
+</li>
+<li><p>如果一个组件需要定义自己的<strong>构造函数</strong>，一定要记得在构造函数的第一行通过 <code>super</code>调用父类也就是<code>React.Component</code>的构造函数。<strong>如果在构造函数中没有调用 <code>super(props)</code>,那么组件实例被构造之后，类实例的所有成员函数就无法通过<code>this.props</code>访问到父组件传递过来的<code>props</code>值</strong>。很明显，给<code>this.props</code>赋值是 <code>React.Component</code>构造函数的工作之一</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mysql-server</div></pre></td></tr></table></figure>
-<p>安装过程会弹出提示框，输入root用户的密码，我在这里设置密码为root</p>
-<p>安装完成后，MySQL服务器会自动启动，我们检查MySQL服务器程序。</p>
-<h4 id="mysql检查"><a href="#mysql检查" class="headerlink" title="mysql检查"></a>mysql检查</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># 检查MySQL服务器系统进程</div><div class="line">-aux|grep mysql</div><div class="line">mysql     3205  2.0  0.5 549896 44092 ?        Ssl  20:10   0:00 /usr/sbin/mysqld</div><div class="line">conan     3360  0.0  0.0  11064   928 pts/0    S+   20:10   0:00 grep --color=auto mysql</div><div class="line"></div><div class="line"># 检查MySQL服务器占用端口</div><div class="line">netstat -nlt|grep 3306</div><div class="line">tcp        0      0 127.0.0.1:3306          0.0.0.0:*               LISTEN</div><div class="line"></div><div class="line"># 通过启动命令检查MySQL服务器状态</div><div class="line">sudo /etc/init.d/mysql status</div><div class="line"># 通过系统服务命令检查MySQL服务器状态</div><div class="line">service mysql status</div></pre></td></tr></table></figure>
-<h4 id="通过命令行客户端访问MySQL"><a href="#通过命令行客户端访问MySQL" class="headerlink" title="通过命令行客户端访问MySQL"></a>通过命令行客户端访问MySQL</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -uroot -p //password: root</div></pre></td></tr></table></figure>
-<h4 id="修改MySQL服务器的配置"><a href="#修改MySQL服务器的配置" class="headerlink" title="修改MySQL服务器的配置"></a>修改MySQL服务器的配置</h4><h5 id="将字符编码设置为UTF-8"><a href="#将字符编码设置为UTF-8" class="headerlink" title="将字符编码设置为UTF-8"></a>将字符编码设置为UTF-8</h5><p>默认情况下，MySQL的字符集是latin1，因此在存储中文的时候，会出现乱码的情况，所以我们需要把字符集统一改成UTF-8。</p>
-<p>用vi打开MySQL服务器的配置文件my.cnf</p>
-<h5 id="让MySQL服务器被远程访问"><a href="#让MySQL服务器被远程访问" class="headerlink" title="让MySQL服务器被远程访问"></a>让MySQL服务器被远程访问</h5><p>默认情况下，MySQL服务器不允许远程访问，只允许本机访问，所以我们需要设置打开远程访问的功能。</p>
-<p>用vi打开MySQL服务器的配置文件my.cnf</p>
-<p>当我们修改完mysql权限相关的操作后一定要刷新权限表，使配置生效,执行<br><code>flush privileges;</code></p>
-<p>第一种：是直接将原来的 <code>user=&#39;root&#39; and host=&#39;localhost&#39;</code> 记录的host修改成%或指定的ip<br>1) 将host设置为%表示任何ip都能连接mysql<br><code>update user set host=&#39;%&#39; where user=&#39;root&#39; and host=&#39;localhost&#39;;</code><br>2)  当然也可以将host指定为某个ip<br><code>update user set host=&#39;106.39.178.131&#39; where user=&#39;root&#39; and host=&#39;localhost&#39;;</code><br>3) 执行完以上语句,接着执行以下语句 ,刷新权限表,使配置生效<br><code>flush privileges</code></p>
-<h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a href="http://www.jb51.net/article/121173.htm" target="_blank" rel="external">mysql配置客户端访问</a></p>
-<p><a href="http://blog.fens.me/linux-mysql-install/" target="_blank" rel="external">mysql安装</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">constructor(props) &#123;</div><div class="line">    console.log(&apos;enter constructor:&apos; + props.caption);</div><div class="line"></div><div class="line">    /*</div><div class="line">    * 若未调用父组件的构造函数</div><div class="line">    * 类实例的所有成员函数就无法通过 this.props 访问到父组件传递过来的 props 值</div><div class="line">    */</div><div class="line">    super(props);</div><div class="line"></div><div class="line">    // ES6方法创造的 React 组件类并不自动给我们绑定 this 到当前实例对象</div><div class="line">    this.onClickIncrementButton = this.onClickIncrementButton.bind(this);</div><div class="line">    this.onClickDecrementButton = this.onClickDecrementButton.bind(this);</div><div class="line"></div><div class="line">    this.state = &#123;</div><div class="line">        count: props.initValue || 0</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>ES6方法创造的 React 组件类并不自动给我们绑定 this 到当前实例对象</li>
+</ul>
+<h3 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h3><ul>
+<li>装载过程（Mount ），也就是把组件第一次在 DOM 树中渲染的过程；</li>
+<li>更新过程（Update ），当组件被重新渲染的过程；</li>
+<li>卸载过程（Unmount），组件从 DOM 中删除的过程。<h4 id="装载过程"><a href="#装载过程" class="headerlink" title="装载过程"></a>装载过程</h4><h5 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h5></li>
+<li>无状态的 React 组件往往就不需要定义构造函数</li>
+<li>以下场景需要构造函数：<strong>初始化 state、绑定成员函数的 this 环境</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">在 ES6 语法下，类的每个成员函数在执行时的 this 并不是和类实例自动绑定的。</div><div class="line">而在构造函数中， this就是当前组件实例，</div><div class="line">所以，为了方便将来的调用，往往在构造函数中将这个实例的特定函数绑定 this 为当前实例</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用 ES6 的话，在构造函数中通过给 this.state 赋值完成状态的初始化，通过给类属性</div><div class="line">（注意是类属性，而不是类的实例对象属性） defaultProps 赋值指定 props 初始值，达到的</div><div class="line">效果是完全一样的</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class  Sample  extends  React.Component  &#123;</div><div class="line">    constructor(props)  &#123;</div><div class="line">        super(props);</div><div class="line">        this.state  =  &#123;foo:&apos;bar&apos;&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Sample.defaultProps  =  &#123;</div><div class="line">    return  &#123;sampleProp:  0)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="render"><a href="#render" class="headerlink" title="render"></a>render</h5><ul>
+<li>==<strong>所有 React 组件的父类 React. Component<br>类对除 render 之外的生命周期函数都有默认实现</strong>==</li>
+<li>通常一个组件要发挥作用，总是要渲染一些东西， render 函数并不做实际的渲染动作，它只是返回一个 JSX 描述的结构，最终由 React 来操作渲染过程。</li>
+<li>render 函数本身并不往 DOM 树上渲染或者装载内容，它只是返回一个 <code>JSX</code> 表示的对象,然后由 React 库来根据返回对象决定如何渲染</li>
+</ul>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h4><ul>
+<li>所有组件的render函数调用之后，连在一起执行</li>
+<li>此时DOM已装载完成</li>
+</ul>
+<h4 id="更新过程"><a href="#更新过程" class="headerlink" title="更新过程"></a>更新过程</h4><ul>
+<li>当props或者state被修改时，会引发组件的更新过程</li>
+<li>更新过程会依次调用以下生命周期函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">componentWillReceiveProps</div><div class="line">shouldComponentUpdate</div><div class="line">componentWillUpdate</div><div class="line">render</div><div class="line">componentDidUpdate</div></pre></td></tr></table></figure>
+<h5 id="componentWillReceiveProps-nextProps"><a href="#componentWillReceiveProps-nextProps" class="headerlink" title="componentWillReceiveProps(nextProps)"></a>componentWillReceiveProps(nextProps)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">只要是父组件的 render 函数被调用，在 render 函数里面被渲染的子组件就会经历更新过</div><div class="line">程，不管父组件传给子组件的 props 有没有改变，都会触发子组件的 componentWillReceiveProps 函数。</div><div class="line"></div><div class="line">通过 this.setState 方法触发的更新过程不会调用这个函数，这是因为这个函数</div><div class="line">适合根据新的 props 值（也就是参数 nextProps ）来计算出是不是要更新内部状态 state</div></pre></td></tr></table></figure>
+<h5 id="shouldComponentUpdate-nextProps-nextState"><a href="#shouldComponentUpdate-nextProps-nextState" class="headerlink" title="shouldComponentUpdate(nextProps, nextState)"></a>shouldComponentUpdate(nextProps, nextState)</h5><ul>
+<li>决定了一个组件什么时候不需要渲染</li>
+<li>要求有返回结果 返回布尔值：<strong>告诉 React 库这个组件在这次更新过程中是否要继续</strong>。</li>
+<li><p>在更新过程中， <strong>React 库首先调用 shouldComponentUpdate函数</strong>，如果这个函数返回<br><strong>true ，那就会继续更新过程</strong>，接下来调用 render 函数；反之，如果得到一个 <strong>false</strong> ，那就<br>立刻<strong>停止更新</strong>过程，也就不会引发后续的渲染了</p>
+</li>
+<li><p>使用恰当，可以提高性能</p>
+</li>
+</ul>
+<h4 id="卸载过程"><a href="#卸载过程" class="headerlink" title="卸载过程"></a>卸载过程</h4><h5 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">React 组件的卸载过程只涉及一个函数 componentWillUnmount ， 当 React 组件要从</div><div class="line">DOM 树上删除掉之前，对应的 componentWillUnmount 函数会被调用，所以这个函数适</div><div class="line">合做一些清理性的工作。</div></pre></td></tr></table></figure>
+<h3 id="组件向外传递数据"><a href="#组件向外传递数据" class="headerlink" title="组件向外传递数据"></a>组件向外传递数据</h3><ul>
+<li>子组件某些情况下也需要==把数据传递给父组件==</li>
+</ul>
+<h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><code>React.createClass 、 React.PropTypes</code>等模块被移出了<code>react</code>包，现在你必须从单独的包里引入。<br>==PropTypes is not defined==<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import PropTypes from &apos;prop-types&apos;;</div></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -392,27 +406,21 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag">#Linux</a>
-          
-        </div>
-      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/05/JS实现排序算法/" rel="next" title="JS实现排序算法">
-                <i class="fa fa-chevron-left"></i> JS实现排序算法
+              <a href="/2018/02/08/JavaScript设计模式【读书笔记】/" rel="next" title="JavaScript设计模式【读书笔记】">
+                <i class="fa fa-chevron-left"></i> JavaScript设计模式【读书笔记】
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/28/Yeoman量身定制前端脚手架-md/" rel="prev" title="Yeoman量身定制前端脚手架">
-                Yeoman量身定制前端脚手架 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/02/08/深入浅出React和Redux笔记之Redux-md/" rel="prev" title="深入浅出React和Redux笔记之Redux">
+                深入浅出React和Redux笔记之Redux <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -578,7 +586,7 @@ VPC 网络：只需要设置出方向和入方向的规则，不区分私网和�
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装mysql前配置"><span class="nav-number">1.</span> <span class="nav-text">安装mysql前配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql安装"><span class="nav-number">2.</span> <span class="nav-text">mysql安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mysql检查"><span class="nav-number">3.</span> <span class="nav-text">mysql检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#通过命令行客户端访问MySQL"><span class="nav-number">4.</span> <span class="nav-text">通过命令行客户端访问MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改MySQL服务器的配置"><span class="nav-number">5.</span> <span class="nav-text">修改MySQL服务器的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#将字符编码设置为UTF-8"><span class="nav-number">5.1.</span> <span class="nav-text">将字符编码设置为UTF-8</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#让MySQL服务器被远程访问"><span class="nav-number">5.2.</span> <span class="nav-text">让MySQL服务器被远程访问</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文章"><span class="nav-number">6.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一章-React新的前端思维"><span class="nav-number">1.</span> <span class="nav-text">第一章 React新的前端思维</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二章-构建高质量React组件"><span class="nav-number">2.</span> <span class="nav-text">第二章 构建高质量React组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#React-的-prop"><span class="nav-number">2.1.</span> <span class="nav-text">React 的 prop</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件的生命周期"><span class="nav-number">3.</span> <span class="nav-text">组件的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#装载过程"><span class="nav-number">3.1.</span> <span class="nav-text">装载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">3.1.1.</span> <span class="nav-text">constructor</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#render"><span class="nav-number">3.1.2.</span> <span class="nav-text">render</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#componentDidMount"><span class="nav-number">3.2.</span> <span class="nav-text">componentDidMount</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更新过程"><span class="nav-number">3.3.</span> <span class="nav-text">更新过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#componentWillReceiveProps-nextProps"><span class="nav-number">3.3.1.</span> <span class="nav-text">componentWillReceiveProps(nextProps)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#shouldComponentUpdate-nextProps-nextState"><span class="nav-number">3.3.2.</span> <span class="nav-text">shouldComponentUpdate(nextProps, nextState)</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#卸载过程"><span class="nav-number">3.4.</span> <span class="nav-text">卸载过程</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#componentWillUnmount"><span class="nav-number">3.4.1.</span> <span class="nav-text">componentWillUnmount</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#组件向外传递数据"><span class="nav-number">4.</span> <span class="nav-text">组件向外传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Provider"><span class="nav-number">5.</span> <span class="nav-text">Provider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意事项"><span class="nav-number">6.</span> <span class="nav-text">注意事项</span></a></li></ol></div>
             
           </div>
         </section>

@@ -3,6 +3,114 @@
   
     
     <entry>
+      <title><![CDATA[深入浅出React和Redux笔记之Redux]]></title>
+      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BRedux-md/</url>
+      <content type="html"><![CDATA[<h4 id="三个基本原则"><a href="#三个基本原则" class="headerlink" title="三个基本原则"></a>三个基本原则</h4><ul>
+<li><p>唯一数据源</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">应用的状态数据应该只存储在唯一的一个 Store 上。这个唯一 Store 上的状态，</div><div class="line">是一个树形的对象，每个组件往往只是用树形对象上一部</div><div class="line">分的数据，而如何设计 Store 上状态的结构，就是 Redux 应用的核心问题</div></pre></td></tr></table></figure>
+</li>
+<li><p>保持状态只读</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">保持状态只读，就是说不能去直接修改状态，要修改 Store 的状态，必须要通过派发</div><div class="line">一个 action 对象完成。</div><div class="line">    要驱动用户界面渲染，就要改变应用的状态，但是改变状态的方法不是去修</div><div class="line">改状态上值，而是创建一个新的状态对象返回给 Redux ，由 Redux 完成新的状态的组装</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>数据改变只能通过纯函数完成</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">纯函数就是 Reducer</div><div class="line"></div><div class="line">reducer(state ,  action )</div><div class="line"></div><div class="line">第一个参数 state 是当前的状态，</div><div class="line">第二个参数 action 是接收到的 action 对象，</div><div class="line">而 reducer函数要做的事情，就是根据 state 和 action 的值产生一个新的对象返回，注意 reducer 必须是纯函数，</div><div class="line">也就是说函数的返回结果必须完全由参数 state 和 action 决定，</div><div class="line">而且不产生任何副作用，也不能修改参数 state 和 action 对象。</div></pre></td></tr></table></figure>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">// Redux的 reducer 只负责计算状态，却并不负责存储状态</div><div class="line"></div><div class="line">function  reducer(state ,  action)  =&gt;  &#123;</div><div class="line">    const  &#123;counterCaption&#125;  =  action;</div><div class="line"></div><div class="line">    switch  (action.type) &#123;</div><div class="line">        case  ActionTypes.INCREMENT :</div><div class="line">            return  &#123;  ...state ,  [  counterCaption] :  state  [  counterCaption ]  +  1&#125;;</div><div class="line">        case  ActionTypes . DECREMENT:</div><div class="line">            return  &#123;  ...state,  [counterCaption] :  state  [  counterCaption)  - 1&#125;;</div><div class="line">        default :</div><div class="line">            return  state</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="Redux-Context"><a href="#Redux-Context" class="headerlink" title="Redux Context"></a>Redux Context</h4><ul>
+<li><code>&lt;Provider store={store}&gt;</code> react-redux库提供provider</li>
+<li><strong>connect</strong> 接受两个参数</li>
+</ul>
+<h3 id="模块化Redux和React应用"><a href="#模块化Redux和React应用" class="headerlink" title="模块化Redux和React应用"></a>模块化Redux和React应用</h3><p>构建应用的基础</p>
+<ul>
+<li>代码文件的组织结构（按角色划分）</li>
+<li>确定模块的边界</li>
+<li>Store的状态树设计<ul>
+<li>一个模块控制一个状态节点<ul>
+<li>只能修改自己相关的那一部分数据，修改权是互斥的</li>
+</ul>
+</li>
+<li>避免冗余数据</li>
+<li>树形结构扁平</li>
+</ul>
+</li>
+</ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="http://www.ruanyifeng.com/blog/2016/09/redux_tutorial_part_one_basic_usages.html" target="_blank" rel="external">阮一峰 Redux 入门教程（一）：基本用法</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[深入浅出React和Redux笔记之React]]></title>
+      <url>/2018/02/08/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAReact%E5%92%8CRedux%E7%AC%94%E8%AE%B0%E4%B9%8BReact-md/</url>
+      <content type="html"><![CDATA[<h3 id="第一章-React新的前端思维"><a href="#第一章-React新的前端思维" class="headerlink" title="第一章 React新的前端思维"></a>第一章 React新的前端思维</h3><ul>
+<li><strong>响应式编程</strong> Reactive Programming</li>
+<li><code>Virutal DOM</code>不会触及浏览器的部分，只是存在于 JavaScript 空间的树形结构，每次自上而下渲<br>染 React 组件时，会对比这一次产生的 <code>Virutal DOM</code> 和上一次渲染的 <code>Virutal
+DOM</code>，对比<br>就会发现差别，然后修改真正的<code>DOM</code>树时就只需要触及差别中的部分就行。</li>
+<li><code>React</code>等于强制所有组件都按照这种由<code>数据驱动渲染的模式</code>来工作，无论应用的规模多大，都能让程序处于可控范围内。<a id="more"></a>
+<h3 id="第二章-构建高质量React组件"><a href="#第二章-构建高质量React组件" class="headerlink" title="第二章 构建高质量React组件"></a>第二章 构建高质量React组件</h3></li>
+<li>组件的划分要满足<strong>高内聚、低耦合</strong>的原则</li>
+</ul>
+<h4 id="React-的-prop"><a href="#React-的-prop" class="headerlink" title="React 的 prop"></a>React 的 prop</h4><ul>
+<li><p>在 <code>ControlPanel</code>的<code>render</code>函数中将这三个子组件实例用<code>div</code>包起来，因为<code>React</code>要求<code>render</code>函数只能返回一个元素</p>
+</li>
+<li><p>如果一个组件需要定义自己的<strong>构造函数</strong>，一定要记得在构造函数的第一行通过 <code>super</code>调用父类也就是<code>React.Component</code>的构造函数。<strong>如果在构造函数中没有调用 <code>super(props)</code>,那么组件实例被构造之后，类实例的所有成员函数就无法通过<code>this.props</code>访问到父组件传递过来的<code>props</code>值</strong>。很明显，给<code>this.props</code>赋值是 <code>React.Component</code>构造函数的工作之一</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">constructor(props) &#123;</div><div class="line">    console.log(&apos;enter constructor:&apos; + props.caption);</div><div class="line"></div><div class="line">    /*</div><div class="line">    * 若未调用父组件的构造函数</div><div class="line">    * 类实例的所有成员函数就无法通过 this.props 访问到父组件传递过来的 props 值</div><div class="line">    */</div><div class="line">    super(props);</div><div class="line"></div><div class="line">    // ES6方法创造的 React 组件类并不自动给我们绑定 this 到当前实例对象</div><div class="line">    this.onClickIncrementButton = this.onClickIncrementButton.bind(this);</div><div class="line">    this.onClickDecrementButton = this.onClickDecrementButton.bind(this);</div><div class="line"></div><div class="line">    this.state = &#123;</div><div class="line">        count: props.initValue || 0</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>ES6方法创造的 React 组件类并不自动给我们绑定 this 到当前实例对象</li>
+</ul>
+<h3 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h3><ul>
+<li>装载过程（Mount ），也就是把组件第一次在 DOM 树中渲染的过程；</li>
+<li>更新过程（Update ），当组件被重新渲染的过程；</li>
+<li>卸载过程（Unmount），组件从 DOM 中删除的过程。<h4 id="装载过程"><a href="#装载过程" class="headerlink" title="装载过程"></a>装载过程</h4><h5 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title="constructor"></a>constructor</h5></li>
+<li>无状态的 React 组件往往就不需要定义构造函数</li>
+<li>以下场景需要构造函数：<strong>初始化 state、绑定成员函数的 this 环境</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">在 ES6 语法下，类的每个成员函数在执行时的 this 并不是和类实例自动绑定的。</div><div class="line">而在构造函数中， this就是当前组件实例，</div><div class="line">所以，为了方便将来的调用，往往在构造函数中将这个实例的特定函数绑定 this 为当前实例</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">用 ES6 的话，在构造函数中通过给 this.state 赋值完成状态的初始化，通过给类属性</div><div class="line">（注意是类属性，而不是类的实例对象属性） defaultProps 赋值指定 props 初始值，达到的</div><div class="line">效果是完全一样的</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">class  Sample  extends  React.Component  &#123;</div><div class="line">    constructor(props)  &#123;</div><div class="line">        super(props);</div><div class="line">        this.state  =  &#123;foo:&apos;bar&apos;&#125;;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">Sample.defaultProps  =  &#123;</div><div class="line">    return  &#123;sampleProp:  0)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="render"><a href="#render" class="headerlink" title="render"></a>render</h5><ul>
+<li>==<strong>所有 React 组件的父类 React. Component<br>类对除 render 之外的生命周期函数都有默认实现</strong>==</li>
+<li>通常一个组件要发挥作用，总是要渲染一些东西， render 函数并不做实际的渲染动作，它只是返回一个 JSX 描述的结构，最终由 React 来操作渲染过程。</li>
+<li>render 函数本身并不往 DOM 树上渲染或者装载内容，它只是返回一个 <code>JSX</code> 表示的对象,然后由 React 库来根据返回对象决定如何渲染</li>
+</ul>
+<h4 id="componentDidMount"><a href="#componentDidMount" class="headerlink" title="componentDidMount"></a>componentDidMount</h4><ul>
+<li>所有组件的render函数调用之后，连在一起执行</li>
+<li>此时DOM已装载完成</li>
+</ul>
+<h4 id="更新过程"><a href="#更新过程" class="headerlink" title="更新过程"></a>更新过程</h4><ul>
+<li>当props或者state被修改时，会引发组件的更新过程</li>
+<li>更新过程会依次调用以下生命周期函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">componentWillReceiveProps</div><div class="line">shouldComponentUpdate</div><div class="line">componentWillUpdate</div><div class="line">render</div><div class="line">componentDidUpdate</div></pre></td></tr></table></figure>
+<h5 id="componentWillReceiveProps-nextProps"><a href="#componentWillReceiveProps-nextProps" class="headerlink" title="componentWillReceiveProps(nextProps)"></a>componentWillReceiveProps(nextProps)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">只要是父组件的 render 函数被调用，在 render 函数里面被渲染的子组件就会经历更新过</div><div class="line">程，不管父组件传给子组件的 props 有没有改变，都会触发子组件的 componentWillReceiveProps 函数。</div><div class="line"></div><div class="line">通过 this.setState 方法触发的更新过程不会调用这个函数，这是因为这个函数</div><div class="line">适合根据新的 props 值（也就是参数 nextProps ）来计算出是不是要更新内部状态 state</div></pre></td></tr></table></figure>
+<h5 id="shouldComponentUpdate-nextProps-nextState"><a href="#shouldComponentUpdate-nextProps-nextState" class="headerlink" title="shouldComponentUpdate(nextProps, nextState)"></a>shouldComponentUpdate(nextProps, nextState)</h5><ul>
+<li>决定了一个组件什么时候不需要渲染</li>
+<li>要求有返回结果 返回布尔值：<strong>告诉 React 库这个组件在这次更新过程中是否要继续</strong>。</li>
+<li><p>在更新过程中， <strong>React 库首先调用 shouldComponentUpdate函数</strong>，如果这个函数返回<br><strong>true ，那就会继续更新过程</strong>，接下来调用 render 函数；反之，如果得到一个 <strong>false</strong> ，那就<br>立刻<strong>停止更新</strong>过程，也就不会引发后续的渲染了</p>
+</li>
+<li><p>使用恰当，可以提高性能</p>
+</li>
+</ul>
+<h4 id="卸载过程"><a href="#卸载过程" class="headerlink" title="卸载过程"></a>卸载过程</h4><h5 id="componentWillUnmount"><a href="#componentWillUnmount" class="headerlink" title="componentWillUnmount"></a>componentWillUnmount</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">React 组件的卸载过程只涉及一个函数 componentWillUnmount ， 当 React 组件要从</div><div class="line">DOM 树上删除掉之前，对应的 componentWillUnmount 函数会被调用，所以这个函数适</div><div class="line">合做一些清理性的工作。</div></pre></td></tr></table></figure>
+<h3 id="组件向外传递数据"><a href="#组件向外传递数据" class="headerlink" title="组件向外传递数据"></a>组件向外传递数据</h3><ul>
+<li>子组件某些情况下也需要==把数据传递给父组件==</li>
+</ul>
+<h3 id="Provider"><a href="#Provider" class="headerlink" title="Provider"></a>Provider</h3><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><code>React.createClass 、 React.PropTypes</code>等模块被移出了<code>react</code>包，现在你必须从单独的包里引入。<br>==PropTypes is not defined==<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import PropTypes from &apos;prop-types&apos;;</div></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[JavaScript设计模式【读书笔记】]]></title>
       <url>/2018/02/08/JavaScript%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%90%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0%E3%80%91/</url>
       <content type="html"><![CDATA[<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><p>定义：<strong>保证一个类仅有一个实例</strong>，并提供全局访问。</p>
